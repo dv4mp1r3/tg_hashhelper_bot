@@ -23,13 +23,12 @@ public class HashHelper extends TelegramLongPollingBot {
 
     /**
      *
-     * @param fileName путь к ini-файлу с настройками для бота
+     * @param iniFile инстанс объекта с загруженным конфигом
      * @param scanner инстанс сканера с загруженым конфигом
      */
-    public HashHelper(String fileName, Scanner scanner) {
+    public HashHelper(JIniFile iniFile, Scanner scanner) {
 
         super();
-        JIniFile iniFile = new JIniFile(fileName);
         String sectionMain = "main";
         String sectionMisc = "misc";
         String defaultEmpty = "";
