@@ -15,7 +15,8 @@ public class HashTypeCommand extends AbstractCommand {
     @Override
     public String execute() {
         String result = "";
-        int count = this.scanner.find(this.args[0]);
+        String hash = this.args[0].toLowerCase();
+        int count = this.scanner.find(hash);
         if (count > 0)
         {
             ArrayList<String> arrayList = this.scanner.getParsedHashes();
